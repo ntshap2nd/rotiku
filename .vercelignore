@@ -1,0 +1,8 @@
+.env
+.git
+.github
+tests
+storage/*.key
+vendor
+node_modules
+.phpunit.result.cache
