@@ -1,12 +1,17 @@
 {
     "version": 2,
+    "buildCommand": "composer install --no-dev --optimize-autoloader && php artisan config:cache && php artisan route:cache && npm install && npm run build",
+    "outputDirectory": "public",
     "functions": {
         "api/index.php": {
-            "runtime": "vercel-php@0.6.0",
-            "excludeFiles": "{test/**,tests/**}"
+            "runtime": "vercel-php@0.6.0"
         }
     },
     "routes": [
+        {
+            "src": "/build/(.*)",
+            "dest": "public/build/$1"
+        },
         {
             "src": "/(css|js|images|fonts|storage)/(.*)",
             "dest": "public/$1/$2"
