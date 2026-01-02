@@ -38,7 +38,7 @@ class ProdukResource extends Resource
                     ->label('Gambar Produk')
                     ->image()
                     ->directory('produk')
-                    ->disk('public')
+                    ->disk('s3')
                     ->nullable()
                     ->imagePreviewHeight('150')
                     ->downloadable()
@@ -68,7 +68,7 @@ class ProdukResource extends Resource
             ->columns([
                 Tables\Columns\ImageColumn::make('gambar')
                     ->label('Gambar')
-                    ->disk('public')
+                    ->disk('s3')
                     ->square()
                     ->height(40),
 
