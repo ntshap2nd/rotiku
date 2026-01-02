@@ -1,7 +1,5 @@
 {
     "version": 2,
-    "buildCommand": "composer install --no-dev --optimize-autoloader && php artisan config:cache && php artisan route:cache && npm install && npm run build",
-    "outputDirectory": "public",
     "functions": {
         "api/index.php": {
             "runtime": "vercel-php@0.6.0"
