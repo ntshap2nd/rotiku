@@ -1,9 +1,10 @@
 <?php
 <?php
 
-// Vercel serverless function for Laravel
+// Load the Composer autoloader
 require __DIR__ . '/../vendor/autoload.php';
 
+// Bootstrap Laravel
 $app = require_once __DIR__ . '/../bootstrap/app.php';
 
 $kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
